@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background: #000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>Autori</caption>
+    <thead>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Cognome</th>
+    </thead>
+    <tbody>
+      <tr th:each="autore : ${lista}">
+        <td th:text="${autore.id}"></td>
+        <td th:text="${autore.nome}"></td>
+        <td th:text="${autore.cognome}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
